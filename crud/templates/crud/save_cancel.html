@@ -1,0 +1,20 @@
+{% load crispy_forms_tags%}
+<tr>
+  {% for fields in form %}
+  <td>{{ fields|as_crispy_field }}</td>
+  {% endfor %}
+  <td>
+    <button
+      formnovalidate
+      class="btn btn-success btn-sm"
+      type="submit"
+      name="save"
+      value="{{ score.id }}"
+    >
+      Save
+    </button>
+    <button class="btn btn-secondary btn-sm" type="submit" name="cancel">
+      Cancel
+    </button>
+  </td>
+</tr>
